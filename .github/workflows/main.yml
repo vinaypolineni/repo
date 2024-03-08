@@ -6,8 +6,8 @@ on:
     - main
     
 jobs:
-  deploy_to_Lambda
-    name: deploy to Lambda
+  deploy_to_Lambda:
+    name: deploy_to_Lambda
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
