@@ -1,13 +1,14 @@
-name: deployment
+name: deployment_to_aws_lambda_function
 
 on:
   push:
     branches:
     - main
+    
 jobs:
-  my_job:
-    name: deploy_to_Lambda
-    runs-on: ubuntu-18.04
+  deploy_to_Lambda
+    name: deploy to Lambda
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
       - name: listing files from repo
