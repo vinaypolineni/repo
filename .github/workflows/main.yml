@@ -19,3 +19,5 @@ jobs:
         run: ls -l
       - name: aws cli version
         run: aws --version
+      - name: code adding
+        run: aws lambda update-function-code --function-name webhook --zip-file fileb://python.zip
