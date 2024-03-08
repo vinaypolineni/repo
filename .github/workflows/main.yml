@@ -20,4 +20,7 @@ jobs:
       - name: aws cli version
         run: aws --version
       - name: code adding
-        run: aws lambda update-function-code --function-name webhook --zip-file fileb://python.zip
+        run: aws lambda update-function-code --function-name webhook --zip-file fileb://python.zip --region ap-south-1
+        env:
+          AWS_ACCESS_KEY_ID: ${{secrets.ACCESS_KEY}}
+          AWS_SECRET_ACCESS_KEY: ${{secrets.SECRET_ACCESS_KEY}}
