@@ -1,0 +1,14 @@
+name: deployment
+
+on:
+  push:
+    branches:
+    - main
+jobs:
+  my_job:
+    name: deploy_to_Lambda
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - name: listing files from repo
+        run: ls -l
